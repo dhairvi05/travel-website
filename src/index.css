@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: "Outfit", sans-serif;
+}
+body {
+    background: white;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1;
+    cursor: pointer;
+}
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.btn {
+    color: white;
+    background: #1e20a5;
+    padding: 14px 25px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn img {
+    width: 25px;
+    margin: 10px;
+}
+.btn.darkbtn {
+    background: white;
+    color: #2d232e;
+}

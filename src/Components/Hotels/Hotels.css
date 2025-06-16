@@ -1,0 +1,19 @@
+div ol li {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px 50px;
+}
+.pictures {
+    width: 500px;
+    display: block;
+    height: 300px;
+    border-radius: 20%;
+    padding: 10px 0px;
+
+}
+.pics {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}

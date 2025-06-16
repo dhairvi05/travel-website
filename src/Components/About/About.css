@@ -1,0 +1,35 @@
+.about {
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.about-left {
+    flex-basis: 40%;
+    position: relative;
+}
+.about-right {
+    flex-basis: 50%;
+}
+/* .image2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    (for playIcon, normal css)
+} */
+.about h3 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2d232e;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    max-width: 400px;
+}
+.about p {
+    color: #2d232e;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}

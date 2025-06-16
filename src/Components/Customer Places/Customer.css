@@ -1,0 +1,16 @@
+.customer {
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    
+}
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
