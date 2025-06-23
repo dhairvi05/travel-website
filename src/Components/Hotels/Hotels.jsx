@@ -17,7 +17,8 @@ function Hotels() {
                             <div className="hotels-images">
                             {hotel.images.map((img, i) => (
                                 <img key={i} src={img} alt={`${hotel.name} ${i + 1}`} 
-                                    className={`hotels-img ${hotel.name === 'Asnières-sur-Seine' && i === 0 ? "h-[180px]" : ""}`}/>
+                                    className={`hotels-img ${hotel.name === 'Asnières-sur-Seine' && i === 0 ? "h-[180px]" : ""}
+                                                           ${hotel.name === 'Joondalup Resort' && i === 3 ? "h-[160px]" : ""}`}/>
                             ))}
                             </div>
                         </div>

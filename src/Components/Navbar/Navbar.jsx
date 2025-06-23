@@ -29,10 +29,10 @@ function Navbar() {
         <img src={logo} alt="" className='logo'/>
         <select value={place} onChange={handlePlace} className='bg-transparent border-none'>
           <option value=''>Select</option>
-          <option value='Paris'>Paris</option>
           <option value='India'>India</option>
           <option value='Hawaii'>Hawaii</option>
           <option value='Australia'>Australia</option>
+          <option value='Paris'>Paris</option>
         </select>
         <ul className='text-white'>
             <li><Link to='/'>Home</Link></li>
