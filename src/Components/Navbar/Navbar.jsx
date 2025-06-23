@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, useNavigate} from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../assets/logo.png'
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(()=>{
     window.addEventListener('scroll', ()=>{
@@ -13,20 +14,27 @@ function Navbar() {
     })
   },[]);
 
-  const [query, setQuery] = useState('');
+  const [place, setPlace] = useState('');
   const darkNav = location.pathname !== '/' || sticky;
 
-  useEffect(() => {
-    console.log("Query changed to: ", query);
-  },[query]);
+  const handlePlace = (e) => {
+    const place = e.target.value;
+    if (place != '') {
+      navigate(`/placedetails/${place}`);
+      setPlace('');
+    }
+  }
   return (
     <nav className={`container ${darkNav? 'darkNav' : ''}`}>
         <img src={logo} alt="" className='logo'/>
-        <input type="text" placeholder="Search for places..." className='bg-transparent h-[30px] w-[200px] placeholder '
-              onChange= {(e) => {
-                setQuery(e.target.value);
-              }}></input>
-        <ul className='text-white hover:text-blue-400'>
+        <select value={place} onChange={handlePlace} className='bg-transparent border-none'>
+          <option value=''>Select</option>
+          <option value='Paris'>Paris</option>
+          <option value='India'>India</option>
+          <option value='Hawaii'>Hawaii</option>
+          <option value='Australia'>Australia</option>
+        </select>
+        <ul className='text-white'>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about-us'>About Us</Link></li>
             <li><Link to='/places'>Places</Link></li>

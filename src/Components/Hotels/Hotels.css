@@ -1,19 +1,29 @@
-div ol li {
-    font-size: 30px;
-    font-weight: bolder;
-    padding: 10px 50px;
+.hotels-card {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  align-items: flex-start;
 }
-.pictures {
-    width: 500px;
-    display: block;
-    height: 300px;
-    border-radius: 20%;
-    padding: 10px 0px;
 
+.hotels-left {
+  flex: 1;
 }
-.pics {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
+
+.hotels-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 40px;
+}
+
+.hotels-images {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5px;
+}
+
+.hotels-img {
+  width: 250px;
+  border-radius: 8px;
 }

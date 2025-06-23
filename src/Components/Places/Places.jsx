@@ -22,7 +22,7 @@ function Places() {
             <div className='place'>
                 <img src={hawai} alt="" className='hawai'/>
                 <div className='caption'>
-                    <p>Hawai</p>
+                    <p>Hawaii</p>
                 </div>
             </div>
         </div>

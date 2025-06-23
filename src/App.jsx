@@ -5,8 +5,9 @@ import Hero from './Components/Hero/Hero'
 import Places from './Components/Places/Places'
 import Title from './Components/Title/Title'
 import About from './Components/About/About'
-import Customer from './Components/Customer Places/Customer'
+import Customer from './Components/CustomerPlaces/Customer'
 import Bookings from './Components/Bookings/Bookings'
+import Placedetails from './Components/Placedata/Placedetails'
 import Hotels from './Components/Hotels/Hotels'
 
 function App() {
@@ -16,11 +17,9 @@ function App() {
              <Routes>
               <Route path='/' element={<Hero />}/>
               <Route path='/home' element={<Navigate to='/'/>}/>
-              <Route path='/about-us' element={<>
-                                                <div className='container'>
+              <Route path='/about-us' element={<div className='container'>
                                                   <About/>
-                                                </div>
-                                               </>}/>
+                                                </div>}/>
               <Route path='/places' element={<>
                                               <div className='container'>
                                                 <Title title='Places you may like'/>
@@ -34,7 +33,8 @@ function App() {
                                                   <Bookings/>
                                                 </div>
                                                </>}/>
-              <Route path='/hotels' element={<Hotels/>}/>
+              <Route path='/placedetails/:placeName' element={<Placedetails/>}/>
+              <Route path='/hotels/:placeName' element={<Hotels/>}/>
              </Routes>
            </Router>
          </>

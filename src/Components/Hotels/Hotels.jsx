@@ -1,40 +1,37 @@
 import React from 'react'
-import {useLocation} from 'react-router-dom'
+import {useLocation, useParams} from 'react-router-dom'
 import './Hotels.css'
-import paris11 from '../../assets/paris11.avif'
-import paris21 from '../../assets/paris21.avif'
-import paris31 from '../../assets/paris31.avif'
+import Hotelsdata from './Hotelsdata.js'
 
 function Hotels() {
-    const location = useLocation();
-    const destination = location.state?.destination;
-    if(!destination) {
-        return <p className='text-center mt-[100px] text-[#2d232e]'>No destination selected. Please go back and search.</p>
-    }
-    return(
-        <div className='container'>
-            <h2 className='mt-[100px] text-[40px] text-[#2d232e]'>Top Best Stays in {destination}:</h2>
-            <ol>
-                <li>Room in Nanterre, {destination}
-                    <div className='pics'>
-                        <img src={paris11} alt="" className='pictures'/>
-                        <p className="mr-[160px] text-[25px]">View More</p>
+        const {placeName} = useParams();
+        const placeKey = placeName.charAt(0).toUpperCase() + placeName.slice(1).toLowerCase();
+        const hotels = Hotelsdata[placeKey];
+        return(
+            <div className="container">
+                <h1 className="hotels-title pt-[100px] text-[60px] text-[#2e2323]">Hotels in {placeKey}:</h1>
+                {hotels.map((hotel, idx) => (
+                    <div key={idx} className="hotels-card">
+                        <div className="hotels-left">
+                            <h2 className="text-2xl font-semibold mb-2">{hotel.name}</h2>
+                            <div className="hotels-images">
+                            {hotel.images.map((img, i) => (
+                                <img key={i} src={img} alt={`${hotel.name} ${i + 1}`} 
+                                    className={`hotels-img ${hotel.name === 'Asnières-sur-Seine' && i === 0 ? "h-[180px]" : ""}`}/>
+                            ))}
+                            </div>
+                        </div>
+                        <div className="hotels-right">
+                            <p><strong>Location:</strong> {hotel.location}</p>
+                            <p><strong>Price:</strong> {hotel.price}</p>
+                            <p><strong>Rating:</strong> ⭐ {hotel.rating}</p>
+                            <div className='pt-[20px]'>
+                                <button className='btn'>Book Now</button>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li>Garges-lès-Gonesse, {destination}
-                    <div className='pics'>
-                        <img src={paris21} alt="" className='pictures'/>
-                        <p className="mr-[160px] text-[25px]">View More</p>
-                    </div>
-                </li>
-                <li>Asnières-sur-Seine, {destination}
-                    <div className='pics'>
-                        <img src={paris31} alt="" className='pictures'/>
-                        <p className="mr-[160px] text-[25px]">View More</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    );
+                ))}
+            </div>
+        );
 }
 export default Hotels

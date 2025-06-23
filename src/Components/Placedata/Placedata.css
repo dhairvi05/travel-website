@@ -1,0 +1,32 @@
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 100px;
+    padding-top: 60px;
+    color: #2d232e;
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+.images img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.images img:first-child {
+    grid-row: span 2;
+    height: 100%;
+}
+.images img:nth-child(4) {
+    transform: translateY(-20px);
+    height: 25em;
+}
+.images img:nth-child(2) {
+    height: 17.5em;
+}
+.images img:nth-child(5) {
+    height: 23em;
+}
