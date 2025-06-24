@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useLocation, useParams, useNavigate} from 'react-router-dom'
 import './Hotels.css'
 import Hotelsdata from './Hotelsdata.js'
@@ -9,6 +9,14 @@ function Hotels() {
         const placeKey = placeName.charAt(0).toUpperCase() + placeName.slice(1).toLowerCase();
         const hotels = Hotelsdata[placeKey];
         const navigate = useNavigate();
+
+        const [image, setImage] = useState(null);
+        const openImg = (src) => {
+            setImage(src);
+        };
+        const closeImg =() => {
+            setImage(null);
+        };
 
         return(
             <div className="container">
@@ -21,7 +29,8 @@ function Hotels() {
                             {hotel.images.map((img, i) => (
                                 <img key={i} src={img} alt={`${hotel.name} ${i + 1}`} 
                                     className={`hotels-img ${hotel.name === 'Asnières-sur-Seine' && i === 0 ? "h-[180px]" : ""}
-                                                           ${hotel.name === 'Joondalup Resort' && i === 3 ? "h-[160px]" : ""}`}/>
+                                                           ${hotel.name === 'Joondalup Resort' && i === 3 ? "h-[160px]" : ""}`}
+                                    onClick={()=>openImg(img)}/>
                             ))}
                             </div>
                         </div>
@@ -35,6 +44,11 @@ function Hotels() {
                         </div>
                     </div>
                 ))}
+                {image && (
+                    <div className='big-hotel' onClick={closeImg}>
+                        <img src={image} alt="Enlarged" className='popup-hotel'/>
+                    </div>
+                )}
             </div>
         );
 }

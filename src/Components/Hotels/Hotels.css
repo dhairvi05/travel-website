@@ -4,11 +4,9 @@
   margin-bottom: 50px;
   align-items: flex-start;
 }
-
 .hotels-left {
   flex: 1;
 }
-
 .hotels-right {
   flex: 1;
   display: flex;
@@ -16,14 +14,31 @@
   gap: 10px;
   padding-top: 40px;
 }
-
 .hotels-images {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 5px;
 }
-
 .hotels-img {
   width: 250px;
   border-radius: 8px;
+}
+.big-hotel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.popup-hotel {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    background-color: white;
 }

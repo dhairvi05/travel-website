@@ -10,6 +10,7 @@ import Bookings from './Components/Bookings/Bookings'
 import Placedetails from './Components/Placedata/Placedetails'
 import Hotels from './Components/Hotels/Hotels'
 import Bookhotel from './Components/Bookhotel/Bookhotel'
+import Signin from './Components/Signin/Signin'
 
 function App() {
   return(<>
@@ -37,6 +38,7 @@ function App() {
               <Route path='/placedetails/:placeName' element={<Placedetails/>}/>
               <Route path='/hotels/:placeName' element={<Hotels/>}/>
               <Route path='/book/:placeName/:hotelName' element={<Bookhotel/>}/>
+              <Route path='/signin' element={<Signin/>}/>
              </Routes>
            </Router>
          </>

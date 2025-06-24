@@ -1,15 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './About.css'
 import playIcon from '../../assets/playIcon.png'
 import flightPerson from '../../assets/flightPerson.jpg'
 
 function About() {
+    const [play, setPlay] = useState(false);
+
     return(
         <div className='about'>
             <div className='about-left'>
-                <img src={flightPerson} alt="" className='w-[500px] rounded-[10%] h-[380px] cursor-pointer'/>
-                <img src={playIcon} alt="" className='w-[60px] rounded-[10%] 
-                                           absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer'/>
+                {play ? (<div className='video'>
+                              <iframe src='https://www.youtube.com/embed/ShLu1dJHlfA?si=gK-2HP4l1X9iO28R' title='Intro to our website' allow='autoplay; encrypted-media' 
+                                      allowFullScreen></iframe>
+                         </div>) : 
+                            (
+                                <div onClick={() => setPlay(true)}>
+                                    <img src={flightPerson} alt="" className='w-[40em] rounded-[10%] h-[24em] cursor-pointer'/>
+                                    <img src={playIcon} alt="" className='w-[60px] rounded-[10%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer'/>
+                                </div>
+                            )}
+                
             </div>
             <div className='about-right'>
                 <h3 className='pt-[50px]'>Who are we?</h3>

@@ -12,13 +12,20 @@
 .about-right {
     flex-basis: 50%;
 }
-/* .image2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    (for playIcon, normal css)
-} */
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  padding-top: 60px; 
+}
+.video iframe {
+  width: 40em;
+  height: 24em;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
 .about h3 {
     font-size: 40px;
     font-weight: 600;
