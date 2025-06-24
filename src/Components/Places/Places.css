@@ -3,7 +3,8 @@
     width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 .place img {
     width: 100%;
@@ -12,27 +13,32 @@
     height: 345px;
 }
 .place {
-    flex-basis: 30%;
-    position: relative;
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* adjust as needed */
+  aspect-ratio: 4 / 3; /* maintain proportion */
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.hawai {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .caption {
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,15,152,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: whitesmoke;
-    cursor: pointer;
-    font-size: 24px;
-    opacity: 0;
-    padding-top: 70%;
-    transition: 0.4s;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 15, 152, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* avoids hover blocking */
 }
 .place:hover .caption {
     opacity: 1;

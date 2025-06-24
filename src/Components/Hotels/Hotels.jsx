@@ -1,12 +1,15 @@
 import React from 'react'
-import {useLocation, useParams} from 'react-router-dom'
+import {useLocation, useParams, useNavigate} from 'react-router-dom'
 import './Hotels.css'
 import Hotelsdata from './Hotelsdata.js'
+import Bookhotel from '../Bookhotel/Bookhotel.jsx'
 
 function Hotels() {
         const {placeName} = useParams();
         const placeKey = placeName.charAt(0).toUpperCase() + placeName.slice(1).toLowerCase();
         const hotels = Hotelsdata[placeKey];
+        const navigate = useNavigate();
+
         return(
             <div className="container">
                 <h1 className="hotels-title pt-[100px] text-[60px] text-[#2e2323]">Hotels in {placeKey}:</h1>
@@ -27,7 +30,7 @@ function Hotels() {
                             <p><strong>Price:</strong> {hotel.price}</p>
                             <p><strong>Rating:</strong> ⭐ {hotel.rating}</p>
                             <div className='pt-[20px]'>
-                                <button className='btn'>Book Now</button>
+                                <button className='btn' onClick={() => navigate(`/book/${placeKey}/${encodeURIComponent(hotel.name)}`)}>Book Now</button>
                             </div>
                         </div>
                     </div>
