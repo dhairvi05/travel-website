@@ -14,10 +14,14 @@ function Hero() {
 
     return(
         <>
-          <div>
-      <h1>Hello from Hero</h1>
-      {/* your existing Hero content */}
-    </div>
+          <div className='hero container'>
+            <div className='hero-text'>
+                <h1>Tailored journeys, unforgettable moments—travel, redefined just for you.</h1>
+                <p>Welcome to your one-stop travel companion. Whether you're chasing sunsets or city lights, 
+                    we've got the routes, stays, and stories to get you there.</p>
+                    <button className='btn !px-[15px] !py-[10px]' onClick={handleClick}>Create Account/Sign In~</button>
+            </div>
+        </div>
         </>
     );
 }
