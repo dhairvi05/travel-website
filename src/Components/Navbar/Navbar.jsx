@@ -39,7 +39,7 @@ function Navbar() {
             <li><Link to='/about-us'>About Us</Link></li>
             <li><Link to='/places'>Places</Link></li>
             <li><Link to='/bookings'>Bookings</Link></li>
-            <li>Contact Us</li>
+            <li><Link to='/contact'>Contact Us</Link></li>
         </ul>
     </nav>
   );

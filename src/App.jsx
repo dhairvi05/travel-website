@@ -11,12 +11,16 @@ import Placedetails from './Components/Placedata/Placedetails'
 import Hotels from './Components/Hotels/Hotels'
 import Bookhotel from './Components/Bookhotel/Bookhotel'
 import Signin from './Components/Signin/Signin'
+import Footer from './Components/Footer/Footer'
+import Contact from './Components/Contact/Contact'
 
 function App() {
   return(<>
-           <Router>
+           <div className="min-h-screen flex flex-col">
+            <Router>
              <Navbar />
-             <Routes>
+             <main className="flex-grow">
+              <Routes>
               <Route path='/' element={<Hero />}/>
               <Route path='/home' element={<Navigate to='/'/>}/>
               <Route path='/about-us' element={<div className='container'>
@@ -39,8 +43,12 @@ function App() {
               <Route path='/hotels/:placeName' element={<Hotels/>}/>
               <Route path='/book/:placeName/:hotelName' element={<Bookhotel/>}/>
               <Route path='/signin' element={<Signin/>}/>
+              <Route path='/contact' element={<Contact/>}/>
              </Routes>
+             </main>
+             <Footer/>
            </Router>
+           </div>
          </>
   );
 }

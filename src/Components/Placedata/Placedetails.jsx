@@ -12,6 +12,15 @@ function Placedetails() {
     const handleCheckHotels = () => {
             navigate(`/hotels/${place.name}`);
         };
+
+    const [image, setImage] = useState(null);
+    const openImg = (src) => {
+        setImage(src);
+        };
+    const closeImg =() => {
+        setImage(null);
+         };
+
     return(
         <div className='container'>
             <h1 className='name'>{place.name}</h1>
@@ -21,13 +30,19 @@ function Placedetails() {
                         className={`${place.name === "India" && idx === 3 ? "pt-[1px] h-[300px]" : ""}
                                     ${place.name === "India" && idx === 2 ? "h-[300px]" : ""}
                                     ${place.name === "Hawaii" && idx === 3 ? "pt-[23px]" : ""}
-                                    ${place.name === "Hawaii" && idx === 2 ? "h-[275px]" : ""}`}/>
+                                    ${place.name === "Hawaii" && idx === 2 ? "h-[275px]" : ""}`}
+                        onClick={()=>openImg(url)}/>
                 ))}
             </div>
             <p className='pt-[30px] text-[30px]'>{place.description}</p>
             <div className='flex justify-center pt-[10px]'>
                 <button className='btn flex items-center justify-center' onClick={handleCheckHotels}>Check Hotels</button>
             </div>
+            {image && (
+                    <div className='big-place' onClick={closeImg}>
+                        <img src={image} alt="Enlarged" className='popup-place'/>
+                    </div>
+                )}
         </div>
     );
 }
