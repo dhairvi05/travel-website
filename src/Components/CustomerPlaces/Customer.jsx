@@ -19,12 +19,12 @@ function Customer() {
     return(
         <div className='customer'>
             <div className='gallery'>
-                <img src={pisaTower} alt="" onClick={()=>openImg(pisaTower)}/>
-                <img src={tourists2} alt="" onClick={()=>openImg(tourists2)} className='h-[238px]'/>
-                <img src={city2} alt="" onClick={()=>openImg(city2)}/>
-                <img src={tourists1} alt="" onClick={()=>openImg(tourists1)} className='h-[242px]'/>
-                <img src={tourists3} alt="" onClick={()=>openImg(tourists3)}/>
-                <img src={people1} alt="" onClick={()=>openImg(people1)}/>
+                <img src={pisaTower} alt="" onClick={()=>openImg(pisaTower)} />
+                <img src={tourists2} alt="" onClick={()=>openImg(tourists2)} />
+                <img src={city2} alt="" onClick={()=>openImg(city2)} />
+                <img src={tourists1} alt="" onClick={()=>openImg(tourists1)} />
+                <img src={tourists3} alt="" onClick={()=>openImg(tourists3)} />
+                <img src={people1} alt="" onClick={()=>openImg(people1)} />
             </div>
             {image && (
                 <div className='big' onClick={closeImg}>

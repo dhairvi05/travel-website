@@ -6,13 +6,16 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 5px;
+    row-gap: 10px;
+    column-gap: -10px;
     
 }
 .gallery img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    height: 238px;
+    cursor: pointer;
 }
 .big {
     position: fixed;

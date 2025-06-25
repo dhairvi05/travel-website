@@ -11,7 +11,10 @@
     font-family: "Outfit", sans-serif;
 }
 body {
-    background: white;
+    background: linear-gradient(135deg, #a8dcf0, #c0eaff, #dff6ff);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 a {
     color: inherit;
@@ -22,6 +25,7 @@ a {
 .container {
     padding-left: 10%;
     padding-right: 10%;
+    background: linear-gradient(135deg, #a8dcf0, #c0eaff, #dff6ff);
 }
 .btn {
     color: white;

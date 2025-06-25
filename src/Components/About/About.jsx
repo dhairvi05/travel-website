@@ -22,7 +22,7 @@ function About() {
                 
             </div>
             <div className='about-right'>
-                <h3 className='pt-[50px]'>Who are we?</h3>
+                <h3 className='pt-[150px]'>Who are we?</h3>
                 <p>At WanderNest, we believe travel isn’t just about reaching a destination—it’s about 
                     the stories you collect along the way. Born from a shared love for adventure, 
                     we started this platform to help every kind of traveler plan smarter, discover more, 

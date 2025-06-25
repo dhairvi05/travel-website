@@ -4,7 +4,7 @@
     background: linear-gradient(rgba(3, 56, 92, 0.6), rgba(3, 56, 92, 0.6)), url(../../assets/homeMountain.jpg);
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(150, 234, 229);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,4 +21,5 @@
     max-width: 700px;
     margin: 10px auto 20px;
     line-height: 1.4;
+    color: whitesmoke;
 }

@@ -15,7 +15,7 @@ function Navbar() {
   },[]);
 
   const [place, setPlace] = useState('');
-  const darkNav = location.pathname !== '/' || sticky;
+  const isHome = location.pathname === '/';
 
   const handlePlace = (e) => {
     const place = e.target.value;
@@ -25,7 +25,7 @@ function Navbar() {
     }
   }
   return (
-    <nav className={`container ${darkNav? 'darkNav' : ''}`}>
+    <nav className='container'>
         <img src={logo} alt="" className='logo'/>
         <select value={place} onChange={handlePlace} className='bg-transparent border-none'>
           <option value=''>Select</option>
@@ -34,7 +34,7 @@ function Navbar() {
           <option value='Australia'>Australia</option>
           <option value='Paris'>Paris</option>
         </select>
-        <ul className='text-white'>
+        <ul className={isHome ? 'text-white' : 'text-black'}>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about-us'>About Us</Link></li>
             <li><Link to='/places'>Places</Link></li>
