@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import {useParams} from 'react-router-dom'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import './Bookhotel.css'
 
 function Bookhotel() {
     const {place, hotelName} = useParams();
     const [adults, setAdults] = useState(1);
     const [kids, setKids] = useState(0);
-    const [checkIn, setCheckIn] = useState('');
-    const [checkOut, setCheckOut] = useState('');
+    const [checkIn, setCheckIn] = useState(null);
+    const [checkOut, setCheckOut] = useState(null);
     const [payment, setPayment] = useState('');
 
     const handleBooking = (e) => {
@@ -21,11 +23,11 @@ function Bookhotel() {
             <form className='form' onSubmit={handleBooking}>
                 <div>
                     <label>Check-in Date: </label>
-                    <input type='date' value={checkIn} onChange={(e) => setCheckIn(e.target.value)} required/>
+                    <DatePicker selected={checkIn} onChange={(date) => setCheckIn(date)} minDate={new Date()} required/>
                 </div>
                 <div>
                     <label>Check-out Date: </label>
-                    <input type='date' value={checkOut} onChange={(e) => setCheckOut(e.target.value)} required/>
+                    <DatePicker selected={checkOut} onChange={(date) => setCheckOut(date)} minDate={checkIn || new Date()} required/>
                 </div>
                 <div>
                     <label>Number of Adults: </label>

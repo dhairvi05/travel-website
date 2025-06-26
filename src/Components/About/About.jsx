@@ -15,8 +15,8 @@ function About() {
                          </div>) : 
                             (
                                 <div onClick={() => setPlay(true)}>
-                                    <img src={flightPerson} alt="" className='w-[40em] rounded-[10%] h-[24em] cursor-pointer'/>
-                                    <img src={playIcon} alt="" className='w-[60px] rounded-[10%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer'/>
+                                    <img src={flightPerson} alt="" className='w-[40em] rounded-[10%] h-[24em] cursor-pointer object-cover'/>
+                                    <img src={playIcon} alt="" className='play w-[60px] rounded-[10%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer'/>
                                 </div>
                             )}
                 

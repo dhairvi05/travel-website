@@ -33,3 +33,32 @@ nav ul li {
 .text-black {
   color: black;
 }
+@media(max-width: 727px) {
+    .logo {
+        width: 140px;
+    }
+    nav ul li {
+        display: block;
+        margin: 0px 0px;
+        font-size: 15px;
+        padding: 3px 0px;
+    }
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+}
+@media(min-width: 728px) and (max-width:1023px) {
+    .logo {
+        width: 160px;
+    }
+    nav ul li {
+        margin: 5px 15px;
+        padding-right: 10px;
+        font-size: 17px
+    }
+    nav {
+        padding: 10px;
+    }
+}

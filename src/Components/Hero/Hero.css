@@ -23,3 +23,19 @@
     line-height: 1.4;
     color: whitesmoke;
 }
+@media(max-width: 767px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+@media(mib-width: 768px) and (max-width: 1023px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+    .hero-text p {
+        font-size: 15px;
+    }
+}

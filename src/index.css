@@ -48,3 +48,15 @@ a {
     background: white;
     color: #2d232e;
 }
+@media(max-width: 767px) {
+    .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+@media(min-width: 768px) and (max-width: 1027px) {
+    .btn {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+}
