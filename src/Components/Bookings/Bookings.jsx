@@ -14,10 +14,11 @@ function Bookings() {
                 navigate(`/hotels/${destination}`);
             }
         };
+        const today = new Date().toISOString().split('T')[0];
         
     return(
         <div className='container'>
-            <h2 className='text-[40px] text-[#2d232e] mt-[100px] ml-[-30px]'>Book you next trip now!</h2>
+            <h2 className='book text-[40px] text-[#2d232e] mt-[100px] ml-[-30px]'>Book you next trip now!</h2>
             <form onSubmit={handleSubmit}>
                 <div className='book-place'>                
                     <div>
@@ -32,11 +33,11 @@ function Bookings() {
                     </div>
                     <div>
                         <label>Select check-in date:</label>
-                        <input type='date' className='destination' required/>
+                        <input type='date' className='destination' value={checkIn} onChange={(e) => setCheckIn(e.target.value)} min={today} required/>
                     </div>
                     <div>
                         <label>Select check-out date:</label>
-                        <input type='date' className='destination' required/>
+                        <input type='date' className='destination' value={checkOut} onChange={(e) => setCheckOut(e.target.value)} min={checkIn || today} min={today} required/>
                     </div>
                     <div>
                         <label>Number of Adults:</label>

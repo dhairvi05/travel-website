@@ -19,7 +19,7 @@ function Bookhotel() {
 
     return(
         <div className='container'>
-            <h1 className='mt-[90px] text-[50px] text-[##2e2323]'>Book {decodeURIComponent(hotelName)}</h1>
+            <h1 className='book-hotel mt-[90px] text-[50px] text-[##2e2323]'>Book {decodeURIComponent(hotelName)}</h1>
             <form className='form' onSubmit={handleBooking}>
                 <div>
                     <label>Check-in Date: </label>

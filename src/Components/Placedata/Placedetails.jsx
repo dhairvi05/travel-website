@@ -34,7 +34,7 @@ function Placedetails() {
                         onClick={()=>openImg(url)}/>
                 ))}
             </div>
-            <p className='pt-[30px] text-[30px]'>{place.description}</p>
+            <p className='description pt-[30px] text-[30px]'>{place.description}</p>
             <div className='flex justify-center pt-[10px]'>
                 <button className='btn flex items-center justify-center' onClick={handleCheckHotels}>Check Hotels</button>
             </div>

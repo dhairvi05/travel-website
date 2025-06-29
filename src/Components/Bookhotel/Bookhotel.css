@@ -8,3 +8,21 @@
     font-size: 25px;
     color: #2e2323;
 }
+@media(max-width: 727px) {
+    .book-hotel {
+        font-size: 30px;
+        margin-top: 140px;
+    }
+    .form {
+        font-size: 20px;
+    }
+}
+@media(min-width: 728px) and (max-width: 1023px) {
+    .book-hotel {
+        font-size: 50px;
+        margin-top: 90px;
+    }
+    .form {
+        font-size: 20px;
+    }
+}

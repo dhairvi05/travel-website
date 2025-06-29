@@ -15,3 +15,16 @@ p {
     font-size: 20px;
     margin: 0px 10px;
 }
+@media(max-width: 727px) {
+    .book {
+        margin-top: 150px;
+    }
+    .destination {
+        width: 350px;
+    }
+}
+@media(min-width: 728px) and (max-width: 1023px) {
+    .destination {
+        width: 550px;
+    }
+}

@@ -4,7 +4,7 @@ import './Contact.css'
 function Contact() {
     return(
         <div className='container'>
-            <h1 className='text-[40px] text-[#2d232e] mt-[100px] ml-[-30px]'>Have any queries? Reach us out!</h1>
+            <h1 className='contact text-[40px] text-[#2d232e] mt-[100px] ml-[-30px]'>Have any queries? Reach us out!</h1>
             <p>
                 <img src="https://img.icons8.com/ios-filled/20/000000/new-post.png" alt="Email Icon" />
                 Email: <a href="mailto:contact@wandernest.com">contact@wandernest.com</a>

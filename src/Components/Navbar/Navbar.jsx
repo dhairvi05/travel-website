@@ -8,11 +8,13 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    window.addEventListener('scroll', ()=>{
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    })
-  },[]);
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50);
+    };
+    window.addEventListener('scroll',handleScroll);
+    return() => window.removeEventListener('scroll',handleScroll);
+  }, []);
 
   const [place, setPlace] = useState('');
   const isHome = location.pathname === '/';
@@ -24,8 +26,9 @@ function Navbar() {
       setPlace('');
     }
   }
+
   return (
-    <nav className='container'>
+    <nav className={`container ${sticky ? 'navbar-sticky' : ''}`}>
         <img src={logo} alt="" className='logo'/>
         <select value={place} onChange={handlePlace} className='bg-transparent border-none'>
           <option value=''>Select</option>

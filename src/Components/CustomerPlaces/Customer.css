@@ -34,5 +34,23 @@
     max-height: 90vh;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255,255,255,0.4);
-    background-color: white;
+}
+@media(max-width: 727px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .gallery img {
+        width: 13em;
+    }
+}
+@media(min-width: 728px) and (max-width: 1023px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-left: -30px;
+    }
+    .gallery img {
+        width: 13em;
+    }
 }

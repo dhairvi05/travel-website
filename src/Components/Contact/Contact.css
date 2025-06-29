@@ -5,3 +5,8 @@ p {
     font-size: 25px;
     padding-top: 10px;
 }
+@media(max-width: 727px) {
+    .contact {
+        margin-top: 150px;
+    }
+}

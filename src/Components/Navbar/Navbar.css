@@ -33,6 +33,11 @@ nav ul li {
 .text-black {
   color: black;
 }
+.navbar-sticky {
+  background-color: rgba(17, 206, 215, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
 @media(max-width: 727px) {
     .logo {
         width: 140px;
